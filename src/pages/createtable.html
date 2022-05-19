@@ -3,17 +3,17 @@
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <html>
 
 <body>
     <nav class="navbar navbar-expand-lg  navbar-dark top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">E-SIT IWT LAB</a>
+            <a class="navbar-brand" href="../../index.html">E-SIT IWT LAB</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-</button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
@@ -52,11 +52,11 @@
     </nav>
 
     <div class="crd mx-auto">
-        <h2 class="subheading">Delete Table</h2>
-        <form method="POST" action="delete.php" class="mt-4 d-flex flex-column">
+        <h2 class="subheading">Create Table</h2>
+        <form method="POST" action="../php/create_table.php" class="mt-4 d-flex flex-column">
             <div class="form-group">
                 <label for="exampleInputEmail1">Server Name</label>
-                <input name="servername" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter servername" />
+                <input name="servername" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Server" />
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">UserName</label>
@@ -69,19 +69,6 @@
             <div class="form-group">
                 <label for="exampleInputEmail1">Database Name</label>
                 <input name="dbname" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter DB Name" />
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Delete By:</label>
-                <select class="form-control" id="exampleFormControlSelect1" name="category">
-              <option name="category">Id</option>
-              <option name="category">Firstname</option>
-              <option name="category">Lastname</option>
-              <option name="category">Email</option>
-            </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Value</label>
-                <input name="cvalue" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Value" />
             </div>
             <button type="submit" class="btn__primary mt-2">Submit</button>
         </form>
