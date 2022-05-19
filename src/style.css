@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+body {
+    background-image: url('https://tailwindcss.com/_next/static/media/hero-dark@90.a7a063e8f9d179fbd72b0b735c5797b7.jpg');
+    background-position: center;
+    background-size: cover;
+    /* height: 100vh; */
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+}
+
+.crd {
+    max-width: 500px;
+    background: #FFFFFF;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 48px 40px;
+    margin-block: 100px;
+}
+
+.subheading {
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.btn__primary {
+    background-color: #1e293b;
+    padding: 12px 20px;
+    color: white;
+    font-weight: 500;
+}
+
+.top {
+    /* background-color: #6D28D9; */
+    color: #FFFFFF;
+}
