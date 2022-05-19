@@ -5,7 +5,8 @@
 
 $servername= $_POST["servername"]; 
 $username=$_POST["username"]; 
-$password=$_POST["password"]; 
+$password=$_POST["password"];
+$dbname=$_POST["dbname"];
 // Create connection
 $conn = new mysqli($servername, $username, $password);
 // Check connection
@@ -14,7 +15,7 @@ if ($conn->connect_error) {
 }
 
 // Create database
-$sql = "CREATE DATABASE myDB";
+$sql = "CREATE DATABASE $dbname";
 if ($conn->query($sql) === TRUE) {
   echo "Database created successfully";
 } else {
