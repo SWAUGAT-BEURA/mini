@@ -1,120 +1,187 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> DBMS Query using PHP</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>DBMS Query using PHP</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        * {
-            font-family: 'Open Sans', sans-serif;
-        }
-        
-        h1 {
-            font-weight: 400;
-        }
-        
-        p {
-            font-weight: 300;
-            font-size: 15px;
-        }
+      * {
+        font-family: "Open Sans", sans-serif;
+      }
+
+      h1 {
+        font-weight: 400;
+      }
+
+      p {
+        font-weight: 300;
+        font-size: 15px;
+      }
     </style>
-    <link rel="stylesheet" href="src/style.css">
-</head>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
 
-<body>
-
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">E-SIT IWT LAB</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">E-SIT IWT LAB</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href=" src/createdb.html " tabindex="-1"
+                >Crt DB</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=" src/createtable.html " tabindex="-1"
+                >Crt TB</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href=" src/addstudent.html " tabindex="-1"
+                >Ins</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href=" src/update.html " tabindex="-1">Upd</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href=" src/delete.html " tabindex="-1">Del</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href=" src/getdata.html " tabindex="-1"
+                >Disp *</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href=" src/displaybycategory.html "
+                tabindex="-1"
+                >Disp w Cat</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-secondary" type="submit">
+              Search
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-
-                    <li class="nav-item">
-                        <a class="nav-link" href=" src/createdb.html " tabindex="-1">Crt DB</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href=" src/createtable.html " tabindex="-1">Crt TB</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href=" src/addstudent.html " tabindex="-1">Ins</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href=" src/update.html " tabindex="-1">Upd</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href=" src/delete.html " tabindex="-1">Del</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href=" src/getdata.html " tabindex="-1">Disp *</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href=" src/displaybycategory.html " tabindex="-1">Disp w Cat</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-secondary" type="submit">Search</button>
-                </form>
-
-            </div>
+          </form>
         </div>
+      </div>
     </nav>
 
-
-
-    <Container class='d-flex align-items-center justify-content-center h-100' style=" min-height: 90vh; ">
-        <div class='w-100' style="max-width: 400px">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class='text-center mb-4'>Student Assignment</h2>
-                    <li class=" text-center list-group-item">
-                        <a style="text-decoration: none; color: black; " href=" src/createdb.html ">Create Database </a>
-                        <br>
-                        <hr>
-                        <a style="text-decoration: none; color: black " href=" src/createtable.html ">Create Table </a>
-                        <br>
-                        <hr>
-                        <a style="text-decoration: none; color: black " href=" src/addstudent.html ">Insert </a>
-                        <br>
-                        <hr>
-                        <a style="text-decoration: none; color: black " href=" src/update.html ">Update</a>
-                        <br>
-                        <hr>
-                        <a style="text-decoration: none; color: black " href=" src/delete.html ">Delete </a>
-                        <br>
-                        <hr>
-                        <a style="text-decoration: none; color: black " href=" src/getdata.html ">Display All </a>
-                        <br>
-                        <hr>
-                        <a style="text-decoration: none; color: black " href=" src/displaybycategory.html ">Display with Category </a>
-                        <br>
-                    </li>
-                </div>
-            </div>
+    <Container
+      class="d-flex align-items-center justify-content-center h-100"
+      style="min-height: 90vh"
+    >
+      <div class="w-100" style="max-width: 400px">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="text-center mb-4">Student Assignment</h2>
+            <li class="text-center list-group-item">
+              <a
+                style="text-decoration: none; color: black"
+                href=" src/createdb.html "
+                >Create Database
+              </a>
+              <br />
+              <hr />
+              <a
+                style="text-decoration: none; color: black"
+                href=" src/createtable.html "
+                >Create Table
+              </a>
+              <br />
+              <hr />
+              <a
+                style="text-decoration: none; color: black"
+                href=" src/addstudent.html "
+                >Insert
+              </a>
+              <br />
+              <hr />
+              <a
+                style="text-decoration: none; color: black"
+                href=" src/update.html "
+                >Update</a
+              >
+              <br />
+              <hr />
+              <a
+                style="text-decoration: none; color: black"
+                href=" src/delete.html "
+                >Delete
+              </a>
+              <br />
+              <hr />
+              <a
+                style="text-decoration: none; color: black"
+                href=" src/getdata.html "
+                >Display All
+              </a>
+              <br />
+              <hr />
+              <a
+                style="text-decoration: none; color: black"
+                href=" src/displaybycategory.html "
+                >Display with Category
+              </a>
+              <br />
+            </li>
+          </div>
         </div>
-
-
+      </div>
     </Container>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-</body>
-
+  </body>
 </html>
