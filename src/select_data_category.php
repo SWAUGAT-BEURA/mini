@@ -1,8 +1,4 @@
 <?php
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $dbname = "myDB";
 
 $servername= $_POST["servername"]; 
 $username=$_POST["username"]; 
@@ -10,6 +6,7 @@ $password=$_POST["password"];
 $dbname=$_POST["dbname"]; 
 $category=$_POST["category"]; 
 $value=$_POST["cvalue"]; 
+$tablename=$_POST["tablename"]; 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -17,7 +14,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id, firstname, lastname, email FROM MyGuests WHERE $category='$value'";
+$sql = "SELECT id, firstname, lastname, email FROM $tablename WHERE $category='$value'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

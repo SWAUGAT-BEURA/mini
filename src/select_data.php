@@ -2,13 +2,13 @@
 // $servername = "localhost";
 // $username = "root";
 // $password = "";
-// $dbname = "myDB";
+// $dbname = "myDB";tablename
 
 $servername= $_POST["servername"]; 
 $username=$_POST["username"]; 
 $password=$_POST["password"]; 
 $dbname=$_POST["dbname"]; 
-
+$tablename=$_POST["tablename"]; 
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -17,7 +17,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id, firstname, lastname, email FROM MyGuests";
+$sql = "SELECT id, firstname, lastname, email FROM $tablename";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

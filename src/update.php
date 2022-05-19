@@ -2,7 +2,7 @@
 // $servername = "localhost";
 // $username = "root";
 // $password = "";
-// $dbname = "myDB";
+// $dbname = "myDB";tablename
 
 $servername= $_POST["servername"]; 
 $username=$_POST["username"]; 
@@ -10,6 +10,7 @@ $password=$_POST["password"];
 $dbname=$_POST["dbname"]; 
 $category=$_POST["category"]; 
 $value=$_POST["cvalue"]; 
+$tablename=$_POST["tablename"];
 $ucategory=$_POST["ucategory"]; 
 $uvalue=$_POST["ucvalue"];
 // Create connection
@@ -19,7 +20,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "UPDATE MyGuests SET $ucategory='$uvalue' WHERE $category='$value'";
+$sql = "UPDATE $tablename SET $ucategory='$uvalue' WHERE $category='$value'";
 $result = $conn->query($sql);
 
 if (mysqli_query($conn, $sql)) {
