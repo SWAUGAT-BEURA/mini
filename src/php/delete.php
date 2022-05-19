@@ -14,7 +14,10 @@ if ($conn->connect_error) {
 $sql = "DELETE FROM MyGuests WHERE $category='$value'";
 
 if ($conn->query($sql) === TRUE) {
-  echo "Record deleted successfully";
+  echo '<script>
+  alert("Record deleted successfully");
+  window.location.href="../../index.html";
+  </script>';
 } else {
   echo "Error deleting record: " . $conn->error;
 }

@@ -25,6 +25,10 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"].    " - email: " . $row["email"].  "<br>";
   }
+  echo '<script>
+  alert("Redirect to home page");
+  window.location.href="../../index.html";
+  </script>';
 } else {
   echo "0 results";
 }
