@@ -7,7 +7,8 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous"
   />
-  <link rel="stylesheet" href="/src/css/style.css" />
+
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <html>
   <body>
@@ -70,11 +71,12 @@
         </div>
       </div>
     </nav>
+
     <div class="crd mx-auto">
-      <h2 class="subheading">Get Data from Database</h2>
+      <h2 class="subheading">Delete Table</h2>
       <form
         method="POST"
-        action="/src/php/select_data.php"
+        action="/src/php/delete.php"
         class="mt-4 d-flex flex-column"
       >
         <div class="form-group">
@@ -121,19 +123,44 @@
           />
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1">Table Name</label>
+          <label for="exampleInputEmail1">TableName</label>
           <input
             name="tablename"
             type="text"
             class="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
-            placeholder="Enter Table Name"
+            placeholder="Enter TableName"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Delete By:</label>
+          <select
+            class="form-control"
+            id="exampleFormControlSelect1"
+            name="category"
+          >
+            <option name="category">Id</option>
+            <option name="category">Firstname</option>
+            <option name="category">Lastname</option>
+            <option name="category">Email</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Value</label>
+          <input
+            name="cvalue"
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter Value"
           />
         </div>
         <button type="submit" class="btn__primary mt-2">Submit</button>
       </form>
     </div>
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

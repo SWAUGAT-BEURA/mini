@@ -7,8 +7,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous"
   />
-
-  <link rel="stylesheet" href="/src/css/style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <html>
   <body>
@@ -71,12 +70,11 @@
         </div>
       </div>
     </nav>
-
     <div class="crd mx-auto">
-      <h2 class="subheading">Create Table</h2>
+      <h2 class="subheading">Get Data from Database</h2>
       <form
         method="POST"
-        action="/src/php/create_table.php"
+        action="/src/php/select_data.php"
         class="mt-4 d-flex flex-column"
       >
         <div class="form-group">
@@ -87,7 +85,7 @@
             class="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
-            placeholder="Enter Server"
+            placeholder="Enter servername"
           />
         </div>
         <div class="form-group">
@@ -123,19 +121,19 @@
           />
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Table Name</label>
+          <label for="exampleInputEmail1">Table Name</label>
           <input
             name="tablename"
             type="text"
             class="form-control"
-            id="exampleInputTableName1"
-            placeholder="TableName"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter Table Name"
           />
         </div>
         <button type="submit" class="btn__primary mt-2">Submit</button>
       </form>
     </div>
-
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
