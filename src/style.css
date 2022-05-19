@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 body {
-    background-image: url(./images/background.png);
-    background-position: cover;
+    background-image: url('https://tailwindcss.com/_next/static/media/hero-dark@90.a7a063e8f9d179fbd72b0b735c5797b7.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -29,4 +31,9 @@ button {
     padding: 12px 20px;
     color: white;
     font-weight: 500;
+}
+
+.top {
+    /* background-color: #6D28D9; */
+    color: #FFFFFF;
 }
