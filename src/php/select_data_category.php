@@ -52,6 +52,11 @@
               <td>{$row['email']}</td>
               <td>{$row['reg_date']}</td>
             </tr>\n";
+
+            echo '<script>
+            alert("Redirect to homepage");
+            window.location.href="../../index.html";
+            </script>';
           }
         }else{
           echo "no results found";

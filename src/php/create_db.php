@@ -14,7 +14,10 @@ if ($conn->connect_error) {
 // Create database
 $sql = "CREATE DATABASE $databasename";
 if ($conn->query($sql) === TRUE) {
-  echo "Database created successfully";
+  echo '<script>
+  alert("Database created succesfully");
+  window.location.href="../../index.html";
+  </script>';
 } else {
   echo "Error creating database: " . $conn->error;
 }
