@@ -1,32 +1,80 @@
-<?php
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $dbname = "myDB";tablename
+<!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>database connections</title>
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    </head>
+    <body>
+      <?php
+      $servername= $_POST["servername"]; 
+      $username=$_POST["username"]; 
+      $password=$_POST["password"]; 
+      $dbname=$_POST["dbname"]; 
+      $tablename=$_POST["tablename"]; 
+      
+      // Create connection
+      $conn = new mysqli($servername, $username, $password, $dbname);
+      // Check connection
+      if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }
+      
+      $sql = "SELECT id, firstname, lastname, email,reg_date FROM $tablename";
+      $result = $conn->query($sql);
 
-$servername= $_POST["servername"]; 
-$username=$_POST["username"]; 
-$password=$_POST["password"]; 
-$dbname=$_POST["dbname"]; 
-$tablename=$_POST["tablename"]; 
+      ?>
+      <h2 class="subheading">Database</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">FirstName</th>
+            <th scope="col">LastName</th>
+            <th scope="col">Email</th>
+            <th scope="col">reg_date</th>
+          </tr>
+        </thead>
+        <tbody>
+        <?php
+        if ($result->num_rows > 0) {
+          while($row = $result->fetch_assoc() ){
+            echo
+            "<tr>
+              <td>{$row['id']}</th>
+              <td>{$row['firstname']}</td>
+              <td>{$row['lastname']}</td>
+              <td>{$row['email']}</td>
+              <td>{$row['reg_date']}</td>
+            </tr>\n";
+          }
+        }else{
+          echo "no results found";
+        }
+        ?>
+        </tbody>
+      </table>
+      
+      <?php $conn->close();?>
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+      <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
 
-$sql = "SELECT id, firstname, lastname, email FROM $tablename";
-$result = $conn->query($sql);
+    </body>
+  </html>
 
-if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"].    " - email: " . $row["email"].  "<br>";
-  }
-} else {
-  echo "0 results";
-}
-$conn->close();
-?>
+
