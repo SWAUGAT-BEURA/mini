@@ -24,7 +24,10 @@ $sql = "UPDATE $tablename SET $ucategory='$uvalue' WHERE $category='$value'";
 $result = $conn->query($sql);
 
 if (mysqli_query($conn, $sql)) {
-  echo "Record updated successfully";
+  echo '<script>
+  alert("Record updated successfully");
+  window.location.href="../../index.html";
+  </script>';
 } else {
   echo "Error updating record: " . mysqli_error($conn);
 }

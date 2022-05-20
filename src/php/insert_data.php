@@ -19,7 +19,10 @@ $sql = "INSERT INTO $tablename (firstname, lastname, email)
 VALUES ('$firstname','$lastname', '$email')";
 
 if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
+  echo '<script>
+  alert("New record created successfully");
+  window.location.href="../../index.html";
+  </script>';
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
