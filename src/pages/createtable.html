@@ -58,69 +58,79 @@
       </div>
     </nav>
 
-    <div class="crd mx-auto">
-      <h2 class="subheading">Create Table</h2>
-      <form
-        method="POST"
-        action="../php/create_table.php"
-        class="mt-4 d-flex flex-column"
-      >
-        <div class="form-group">
-          <label for="exampleInputEmail1">Server Name</label>
-          <input
-            name="servername"
-            type="text"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Enter Server"
-          />
-        </div>
-        <div class="form-group">
-          <label for="exampleInputEmail1">UserName</label>
-          <input
-            name="username"
-            type="text"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Enter username"
-          />
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input
-            name="password"
-            type="password"
-            class="form-control"
-            id="exampleInputPassword1"
-            placeholder="Password"
-          />
-        </div>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Database Name</label>
-          <input
-            name="dbname"
-            type="text"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Enter DB Name"
-          />
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Table Name</label>
-          <input
-            name="tablename"
-            type="text"
-            class="form-control"
-            id="exampleInputTableName1"
-            placeholder="TableName"
-          />
-        </div>
-        <button type="submit" class="btn__primary mt-2">Submit</button>
-      </form>
-    </div>
+    <div class="container">
+      <div class="row">
+          <div class="col-sm">
+                <div class="crd mx-auto">
+                  <h2 class="subheading">Create Table</h2>
+                  <form
+                    method="POST"
+                    action="../php/create_table.php"
+                    class="mt-4 d-flex flex-column"
+                  >
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Server Name</label>
+                      <input
+                        name="servername"
+                        type="text"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter Server"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">UserName</label>
+                      <input
+                        name="username"
+                        type="text"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter username"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input
+                        name="password"
+                        type="password"
+                        class="form-control"
+                        id="exampleInputPassword1"
+                        placeholder="Password"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Database Name</label>
+                      <input
+                        name="dbname"
+                        type="text"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter DB Name"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Table Name</label>
+                      <input
+                        name="tablename"
+                        type="text"
+                        class="form-control"
+                        id="exampleInputTableName1"
+                        placeholder="TableName"
+                      />
+                    </div>
+                    <button type="submit" class="btn__primary mt-2">Submit</button>
+                  </form>
+                </div>
+              
+          </div>
+          <div class="col-sm">
+              One of three columns
+          </div>
+      </div>
+  </div>
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
