@@ -92,7 +92,45 @@
 
             </div>
             <div class="col-sm">
-                One of three columns
+                <div class="crd mx-auto">
+                    <h2 class="subheading">Delete Table</h2>
+                    <form method="POST" action="../php/delete.php" class="mt-4 d-flex flex-column">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Server Name</label>
+                            <input name="servername" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter servername" />
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">UserName</label>
+                            <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username" />
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Database Name</label>
+                            <input name="dbname" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter DB Name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">TableName</label>
+                            <input name="tablename" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter TableName" />
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Delete By:</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="category">
+                  <option name="category">Id</option>
+                  <option name="category">Firstname</option>
+                  <option name="category">Lastname</option>
+                  <option name="category">Email</option>
+                </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Value</label>
+                            <input name="cvalue" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Value" />
+                        </div>
+                        <a class="text-primary text-center" style="text-decoration: none;" href="../../index.html">Home</a>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
