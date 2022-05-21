@@ -48,10 +48,10 @@
               <td>{$row['email']}</td>
               <td>{$row['reg_date']}</td>
             </tr>\n";
-            echo '<script>
-            alert("Database created succesfully");
-            window.location.href="../../index.html";
-            </script>';
+            // echo '<script>
+            // alert("Database created succesfully");
+            // window.location.href="../../index.html";
+            // </script>';
           }
         }else{
           echo "no results found";

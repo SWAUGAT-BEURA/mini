@@ -53,10 +53,10 @@
               <td>{$row['reg_date']}</td>
             </tr>\n";
 
-            echo '<script>
-            alert("Redirect to homepage");
-            window.location.href="../../index.html";
-            </script>';
+            // echo '<script>
+            // alert("Redirect to homepage");
+            // window.location.href="../../index.html";
+            // </script>';
           }
         }else{
           echo "no results found";
